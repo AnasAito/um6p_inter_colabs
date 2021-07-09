@@ -39,6 +39,13 @@ export default function App() {
         labelDotRadius={(d) => 0.5 + d.size}
         labelColor={() => "rgba(255, 165, 0, 0.75)"}
         labelResolution={2}
+        // bars
+        hexBinPointsData={places}
+        hexBinPointWeight="size"
+        hexAltitude={(d) => d.sumWeight - 0.1 + 0.05}
+        hexBinResolution={4}
+        hexBinMerge={true}
+        enablePointerInteraction={false}
       />
     </div>
   );
